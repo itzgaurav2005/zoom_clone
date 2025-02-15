@@ -7,7 +7,6 @@ import { Call, CallRecording } from '@stream-io/video-react-sdk';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import MeetingCard from './MeetingCard';
-import { Heading1 } from 'lucide-react';
 import Loader from './Loader';
 import { useToast } from '@/hooks/use-toast';
 
