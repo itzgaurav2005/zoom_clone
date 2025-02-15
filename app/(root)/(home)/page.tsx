@@ -1,7 +1,8 @@
 import MeetingTypeList from '@/components/MeetingTypeList';
 import React from 'react';
 
-const Home = () => {  
+const Home = ({ params }: { params: { id: string } }) => {
+  console.log(params.id); // Ensure it logs the correct ID
   const now = new Date();
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
   const date = new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(now);
