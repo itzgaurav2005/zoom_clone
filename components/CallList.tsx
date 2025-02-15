@@ -52,8 +52,14 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                     .filter(call => call.recordings.length > 0)
                     .flatMap(call => call.recordings)
 
+<<<<<<< HEAD
             setRecordings(recordings);
             } catch (error) {
+=======
+                setRecordings(recordings)
+
+            } catch {
+>>>>>>> d5fa4e57c28b92aeb4cae88ec9740761f026da7a
                 toast({title : "Try again later"})
             }
 
