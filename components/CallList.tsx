@@ -8,7 +8,6 @@ import MeetingCard from './MeetingCard';
 import Loader from './Loader';
 import { useToast } from '@/hooks/use-toast';
 
-
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
     const { endedCalls, upcomingCalls, callRecordings, isLoading } = useGetCalls();
     const router = useRouter();
@@ -52,17 +51,10 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                     .filter(call => call.recordings.length > 0)
                     .flatMap(call => call.recordings)
 
-<<<<<<< HEAD
-            setRecordings(recordings);
-            } catch (error) {
-=======
-                setRecordings(recordings)
-
+                setRecordings(recordings);
             } catch {
->>>>>>> d5fa4e57c28b92aeb4cae88ec9740761f026da7a
                 toast({title : "Try again later"})
             }
-
         }
 
         if (type === 'recordings') fetchRecordings();
@@ -70,7 +62,6 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
 
     const calls = getCalls();
     const noCallsMessage = getNoCallsMessage();
-
 
     if (isLoading) return <Loader />
 
@@ -93,7 +84,6 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
             )) : (
                 <h1>{noCallsMessage}</h1>
             )}
-
         </div>
     )
 }
